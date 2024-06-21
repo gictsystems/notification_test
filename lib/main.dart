@@ -10,9 +10,9 @@ import 'package:notification_test/firebase_options.dart';
 @pragma('vm:entry-point')
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   final notification = message.notification;
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+   await Firebase.initializeApp(
+   options: DefaultFirebaseOptions.currentPlatform,
+ );
   await NotificationRepository().initializeNotifications();
   await NotificationRepository().sendNotification(
     title: notification!.title!,
@@ -24,6 +24,9 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+   options: DefaultFirebaseOptions.currentPlatform,
+ );
   await NotificationRepository().initializeNotifications();
   FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
   await NotificationRepository().getNotificationToken();

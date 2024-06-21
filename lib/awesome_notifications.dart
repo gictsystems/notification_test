@@ -29,7 +29,7 @@ class NotificationRepository extends NotificationTemplate {
   @override
   Future<String> getNotificationToken() async {
     try {
-      if (Platform.isIOS) {
+    
         await FirebaseMessaging.instance.requestPermission(
           alert: true,
           badge: true,
@@ -38,11 +38,10 @@ class NotificationRepository extends NotificationTemplate {
         );
         final token = await FirebaseMessaging.instance.getAPNSToken();
         debugPrint("Ios APNS token: $token");
-        return token!;
-      } 
-        final token = await FirebaseMessaging.instance.getToken();
-        debugPrint('The firebase messaging token is: $token');
-        return token!;
+      
+        final fcmToken = await FirebaseMessaging.instance.getToken();
+        debugPrint('The firebase messaging token is: $fcmToken');
+        return fcmToken!;
       
     } catch (e) {
       debugPrint(e.toString());
