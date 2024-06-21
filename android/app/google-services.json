@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "859113504702",
+    "project_id": "climate360connect",
+    "storage_bucket": "climate360connect.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:859113504702:android:a59da1f61fdf23ca3183ef",
+        "android_client_info": {
+          "package_name": "com.gict.notification"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "859113504702-cqfgdt5p9vebr86ca51ajetkm78d2k4c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-4mpPiorDRoPkEKFnJ9uj18kdC3oH2j8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "859113504702-cqfgdt5p9vebr86ca51ajetkm78d2k4c.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "859113504702-2qne1husjpoucrolkh61gpmtdddtjsrr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.gictsystems.climate360connect"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:859113504702:android:7b1ece75e84a98d33183ef",
+        "android_client_info": {
+          "package_name": "com.gictsystems.climate360connect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "859113504702-cqfgdt5p9vebr86ca51ajetkm78d2k4c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-4mpPiorDRoPkEKFnJ9uj18kdC3oH2j8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "859113504702-cqfgdt5p9vebr86ca51ajetkm78d2k4c.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "859113504702-2qne1husjpoucrolkh61gpmtdddtjsrr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.gictsystems.climate360connect"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
