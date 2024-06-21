@@ -7,20 +7,20 @@ import 'package:flutter/services.dart';
 import 'package:notification_test/awesome_notifications.dart';
 import 'package:notification_test/firebase_options.dart';
 
-@pragma('vm:entry-point')
-Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
-  final notification = message.notification;
-   await Firebase.initializeApp(
-   options: DefaultFirebaseOptions.currentPlatform,
- );
-  await NotificationRepository().initializeNotifications();
-  await NotificationRepository().sendNotification(
-    title: notification!.title!,
-    body: notification.body!,
-    message: message,
-  );
-  debugPrint("Handling a background message: ${message.messageId}");
-}
+// @pragma('vm:entry-point')
+// Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
+//   final notification = message.notification;
+//    await Firebase.initializeApp(
+//    options: DefaultFirebaseOptions.currentPlatform,
+//  );
+//   await NotificationRepository().initializeNotifications();
+//   await NotificationRepository().sendNotification(
+//     title: notification!.title!,
+//     body: notification.body!,
+//     message: message,
+//   );
+//   debugPrint("Handling a background message: ${message.messageId}");
+// }
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,7 +28,7 @@ void main() async{
    options: DefaultFirebaseOptions.currentPlatform,
  );
   await NotificationRepository().initializeNotifications();
-  FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
+  // FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
   await NotificationRepository().getNotificationToken();
     if (Platform.isIOS) {
     await FirebaseMessaging.instance.requestPermission(
